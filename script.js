@@ -24,7 +24,7 @@ $(document).ready(function() {
         // search term
         var type = $(this).attr("data-type");
 
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=7OIQrr1lH7D2bfR6gYgeaVOTWP29iGxx";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=7OIQrr1lH7D2bfR6gYgeaVOTWP29iGxx";
 
         $.ajax({
                 url: queryURL,
@@ -35,7 +35,6 @@ $(document).ready(function() {
 
                     var animalDiv = $(`<div class='animal-item'>`);
                     var rating = gif.rating;
-
                     var p = $("<p>").text("Rating: " + rating);
 
                     var animated = gif.images.fixed_height.url;
